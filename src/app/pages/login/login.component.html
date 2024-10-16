@@ -1,0 +1,15 @@
+<div class="flex align-items-center justify-content-center h-screen ">
+    <p-card header="Iniciar Sesión" [style]="{ width: '360px' }" styleClass="shadow-6">
+    <div class="p-fluid">
+        <div class="field">
+            <label for="username">Usuario</label>
+            <input id="username" type="text" pInputText [(ngModel)]="username" />
+        </div>
+        <div class="field">
+            <label for="password">Contraseña</label>
+            <p-password id="password" [(ngModel)]="password" [feedback]="false"></p-password>
+        </div>
+        <button pButton type="button" label="Login" (click)="onSubmit()"></button>
+    </div>
+</p-card>
+</div>

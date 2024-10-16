@@ -32,7 +32,20 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "./node_modules/primeng/resources/primeng.css",
+              "./node_modules/primeflex/primeflex.scss",
+              "./node_modules/primeicons/primeicons.css",
+              {
+                "input": "src/dark.scss",
+                "bundleName": "dark",
+                "inject": false
+              },
+              {
+                "input": "src/light.scss",
+                "bundleName": "light",
+                "inject": false
+              }
             ],
             "scripts": []
           },
@@ -98,5 +111,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
