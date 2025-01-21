@@ -30,7 +30,27 @@ export class AppComponent implements OnInit{
     dayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
     dayNamesShort: ['Dom', 'Lun', 'Mar', 'Mi', 'Jue', 'Vie', 'Sab'],
     monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
-    monthNamesShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic']
+    monthNamesShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+    startsWith: 'Comienza con',
+    contains: 'Contiene',
+    notContains: 'No contiene',
+    endsWith: 'Termina con',
+    equals: 'Es igual a',
+    notEquals: 'No es igual a',
+    noFilter: 'Sin filtro',
+    addRule: 'Agregar regla',
+    is: 'Es',
+    isNot: 'No es',
+    before: 'Antes',
+    after: 'Después',
+    dateIs: 'La fecha es',
+    dateIsNot: 'La fecha no es',
+    dateBefore: 'Antes de',
+    dateAfter: 'Después de',
+    clear: 'Limpiar',
+    apply: 'Aplicar',
+    matchAll: 'Coincidir todo',
+    matchAny: 'Coincidir cualquiera'
   });
   this.confirmationService.confirm({
     message: '¿Estás seguro de que quieres continuar?',
