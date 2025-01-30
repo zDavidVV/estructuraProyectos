@@ -3,12 +3,11 @@ import { LayoutService } from '../../service/app.layout.service';
 import { MenuItem } from 'primeng/api';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
-import { ButtonDarkModeComponent } from '../../../assets/components/button-dark-mode/button-dark-mode.component';
 
 @Component({
   selector: 'app-topbar',
   standalone: true,
-  imports: [CommonModule, RouterLink, ButtonDarkModeComponent],
+  imports: [CommonModule, RouterLink],
   templateUrl: './app-top-bar.component.html'
 })
 export class AppTopBarComponent {
@@ -22,4 +21,12 @@ export class AppTopBarComponent {
   @ViewChild('topbarmenu') menu!: ElementRef;
 
   constructor(public layoutService: LayoutService) { }
+
+  isDarkTheme: boolean = false; // Por defecto, tema claro
+
+  toggleTheme() {
+    this.isDarkTheme = !this.isDarkTheme;
+    let data = document.getElementById('theme-css') as HTMLLinkElement 
+    data.href = this.isDarkTheme ? 'dark.css' : 'light.css';
+  }
 }

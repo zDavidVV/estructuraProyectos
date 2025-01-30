@@ -14,8 +14,9 @@
 
     <div #topbarmenu class="layout-topbar-menu" [ngClass]="{'layout-topbar-menu-mobile-active': layoutService.state.profileSidebarVisible}">
         
-        <button class="p-link layout-topbar-button">
-            <app-button-dark-mode></app-button-dark-mode>
+        <button class="p-link layout-topbar-button" (click)="toggleTheme()">
+            <i [className]="!isDarkTheme?'pi pi-sun': 'pi pi-moon'"></i>
+            <span >Modo Oscuro</span>
         </button>
         <button class="p-link layout-topbar-button">
             <i class="pi pi-calendar"></i>
